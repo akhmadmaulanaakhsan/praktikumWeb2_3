@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,12 @@ Route::get('/about', function () {
         "email" => "akhsan@gmail.com"
     ]);
 });
+
+Route::get('/view', function () {
+    return view('boom', [
+        "name" => "akhsannnn",
+        "email" => "akhsan@gmail.com"
+    ]);
+});
+
+Route::get('/view', [PostController::class,'boomesport']);
